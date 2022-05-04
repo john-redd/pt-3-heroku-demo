@@ -18,8 +18,8 @@
     - PORT
     - NODE_ENV
 3. `npx heroku login`
-4. `npx heroku git:clone -a replace-with-app-name`
-    - Example: `npx heroku git:clone -a pt-3-heroku-demo`
+4. `npx heroku git:remote -a replace-with-app-name`
+    - Example: `npx heroku git:remote -a pt-3-heroku-demo`
 5. `git push heroku main`
 
 ### Gotchas
