@@ -112,7 +112,13 @@ To https://git.heroku.com/pt-3-heroku-demo.git
    e1c4b73..453ac5f  main -> main
 ```
 
+***
+
 ### Gotchas
+
+***
+
+#### `git push heroku main` Error
 
 Running `git push heroku main` results in the following error:
 ```
@@ -123,3 +129,30 @@ error: failed to push some refs to 'https://git.heroku.com/pt-3-heroku-demo.git'
 This simply means that your default branch is not named `main`. To fix this, we need to figure out what your default branch is named. Run `git branch` to list all the branches on your machine. You will probably only have one, but on the off chance you have more than one branch, the branch with a `*` next to it is your current branch. Hit `q` on your keyboard to exit out of the branch list. 
 
 Now rerun `git push heroku main`, but replace `main` with the branch name that had the `*` next to it. IE: `git push heroku master` if `master` was the name of the branch that had the `*` next to it.
+
+***
+
+#### Start Script
+Your heroku deployment will fail if you don't have a `start` script in your `package.json`. You can look at the `package.json` for this repo to have an example.
+
+Note that you will need to adjust the file path to make sure that it leads to wherever your server file is.
+
+Examples:
+```json
+...
+  "scripts": {
+    "start": "node server/index.js"
+  },
+...
+```
+```json
+...
+  "scripts": {
+    "start": "node index.js"
+  },
+...
+```
+
+#### Dependencies
+
+Also make sure that you have installed all dependencies that your application needs to run! These probably include at least `express`, `dotenv`, and `cors`.
