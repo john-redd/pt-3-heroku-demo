@@ -17,9 +17,9 @@
 ![Heroku Config Vars Dashboard](./docs/assets/heroku_config_vars.png)
     - PORT
     - NODE_ENV
-3. `yarn heroku login`
-4. `yarn heroku git:clone -a replace-with-app-name`
-    - Example: `yarn heroku git:clone -a pt-3-heroku-demo`
+3. `npx heroku login`
+4. `npx heroku git:clone -a replace-with-app-name`
+    - Example: `npx heroku git:clone -a pt-3-heroku-demo`
 5. `git push heroku main`
 
 ### Gotchas
