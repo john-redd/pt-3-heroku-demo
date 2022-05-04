@@ -21,3 +21,15 @@
 4. `yarn heroku git:clone -a replace-with-app-name`
     - Example: `yarn heroku git:clone -a pt-3-heroku-demo`
 5. `git push heroku main`
+
+### Gotchas
+
+Running `git push heroku main` results in the following error:
+```
+error: src refspec main does not match any
+error: failed to push some refs to 'https://git.heroku.com/pt-3-heroku-demo.git'
+```
+
+This simply means that your default branch is not named `main`. To fix this, we need to figure out what your default branch is named. Run `git branch` to list all the branches on your machine. You will probably only have one, but on the off chance you have more than one branch, the branch with a `*` next to it is your current branch. Hit `q` on your keyboard to exit out of the branch list. 
+
+Now rerun `git push heroku main`, but replace `main` with the branch name that had the `*` next to it. IE: `git push heroku master` if `master` was the name of the branch that had the `*` next to it.
