@@ -18,9 +18,13 @@
     - PORT
     - NODE_ENV
 3. `npx heroku login`
-4. `npx heroku git:remote -a replace-with-app-name`
+4. `git init` if you haven't already initialized a git repo
+5. `npx heroku git:remote -a replace-with-app-name`
     - Example: `npx heroku git:remote -a pt-3-heroku-demo`
-5. `git push heroku main`
+6. `git add .`
+7. `git commit -m 'My commit message'`
+8. `git push heroku main`
+9. To deploy new changes to heroku, re-run steps 6, 7, and 8.
 
 Success should result in an output similar to this in your terminal.
 
