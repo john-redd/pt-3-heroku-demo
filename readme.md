@@ -31,7 +31,7 @@ If you are wanting to push the project in this repository, you will want to foll
 Most of you will more than likely want to follow the ["Push your own project to heroku"](#push-your-own-project-to-heroku) instructions.
 
 ### Push your own project to Heroku
-1. Open your terminal and run j`npm install heroku` to add the required `heroku` dependency to your project.
+1. Open your terminal and run `npm install heroku` to add the required `heroku` dependency to your project.
 2. `npx heroku login` to login to heroku. This should open up a tab in your browser after a few seconds.
 3. `git init` if you haven't already initialized a git repo
 4. `npx heroku git:remote -a replace-with-app-name`
