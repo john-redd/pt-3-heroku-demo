@@ -31,7 +31,9 @@ If you are wanting to push the project in this repository, you will want to foll
 Most of you will more than likely want to follow the ["Push your own project to heroku"](#push-your-own-project-to-heroku) instructions.
 
 ### Push your own project to Heroku
-1. Open your terminal and run `npm install heroku` to add the required `heroku` dependency to your project.
+Start by navigating to your project directory and then opening it in VSCode.
+
+1. Open your terminal in VSCode and run `npm install heroku` to add the required `heroku` dependency to your project.
 2. `npx heroku login` to login to heroku. This should open up a tab in your browser after a few seconds.
 3. `git init` if you haven't already initialized a git repo
 4. `npx heroku git:remote -a replace-with-app-name`
@@ -42,7 +44,9 @@ Most of you will more than likely want to follow the ["Push your own project to 
 8. To deploy new changes to heroku, re-run steps 5, 6, and 7.
 
 ### Push this project to Heroku 
-1. Open your terminal and run `npm install` to install all the dependencies in this project.
+Start by cloning this project to your local machine. Then navigate to the directory where you cloned the project and open it in VSCode.
+
+1. Open your terminal in VSCode and run `npm install` to install all the dependencies in this project.
 2. `npx heroku login` to login to heroku. This should open up a tab in your browser after a few seconds.
 3. `git init` if you haven't already initialized a git repo
 4. `npx heroku git:remote -a replace-with-app-name`
