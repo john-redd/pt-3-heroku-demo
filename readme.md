@@ -10,21 +10,49 @@
 - `heroku` for interacting with and pushing to Heroku
 - `nodemon` for running server in development mode
 
-### Steps
+## Steps
+
+### Create and Configure Heroku App
+You need to do the following, regardless of if you are publishing this exact project, or your own project to Heroku.
+
 1. Create application in [Heroku Dashboard](https://dashboard.heroku.com/apps)
 ![Heroku Apps Dashboard](./docs/assets/heroku_apps_dashboard.png)
 2. Add config vars in Heroku under the **Settings** tab
 ![Heroku Config Vars Dashboard](./docs/assets/heroku_config_vars.png)
     - PORT
     - NODE_ENV
-3. `npx heroku login`
-4. `git init` if you haven't already initialized a git repo
-5. `npx heroku git:remote -a replace-with-app-name`
+
+Please choose either this section, or the next based on what YOU are trying to do. 
+
+If you have your own project that is completely different than the project in the repository, you will want to follow the ["Push your own project to heroku"](#push-your-own-project-to-heroku) instructions.
+
+If you are wanting to push the project in this repository, you will want to follow the ["Push this project to heroku"](#push-this-project-to-heroku) instructions.
+
+Most of you will more than likely want to follow the ["Push your own project to heroku"](#push-your-own-project-to-heroku) instructions.
+
+### Push your own project to Heroku
+1. Open your terminal and run j`npm install heroku` to add the required `heroku` dependency to your project.
+2. `npx heroku login` to login to heroku. This should open up a tab in your browser after a few seconds.
+3. `git init` if you haven't already initialized a git repo
+4. `npx heroku git:remote -a replace-with-app-name`
     - Example: `npx heroku git:remote -a pt-3-heroku-demo`
-6. `git add .`
-7. `git commit -m 'My commit message'`
-8. `git push heroku main`
-9. To deploy new changes to heroku, re-run steps 6, 7, and 8.
+5. `git add .`
+6. `git commit -m 'My commit message'`
+7. `git push heroku main`
+8. To deploy new changes to heroku, re-run steps 5, 6, and 7.
+
+### Push this project to Heroku 
+1. Open your terminal and run `npm install` to install all the dependencies in this project.
+2. `npx heroku login` to login to heroku. This should open up a tab in your browser after a few seconds.
+3. `git init` if you haven't already initialized a git repo
+4. `npx heroku git:remote -a replace-with-app-name`
+    - Example: `npx heroku git:remote -a pt-3-heroku-demo`
+5. `git add .`
+6. `git commit -m 'My commit message'`
+7. `git push heroku main`
+8. To deploy new changes to heroku, re-run steps 5, 6, and 7.
+
+***
 
 Success should result in an output similar to this in your terminal.
 
@@ -116,8 +144,6 @@ To https://git.heroku.com/pt-3-heroku-demo.git
    e1c4b73..453ac5f  main -> main
 ```
 
-***
-
 ### Gotchas
 
 ***
@@ -159,4 +185,4 @@ Examples:
 
 #### Dependencies
 
-Also make sure that you have installed all dependencies that your application needs to run! These probably include at least `express`, `dotenv`, and `cors`.
+Also make sure that you have installed all dependencies that your application needs to run! These probably include at least `express`, `dotenv`, `cors`, and `heroku`.
