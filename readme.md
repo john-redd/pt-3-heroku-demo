@@ -187,6 +187,9 @@ Examples:
 ...
 ```
 
+#### Location of `package.json`
+Your heroku deployment will fail if your `package.json` as not located in the root directory of your project.
+
 #### Dependencies
 
 Also make sure that you have installed all dependencies that your application needs to run! These probably include at least `express`, `dotenv`, `cors`, and `heroku`.
